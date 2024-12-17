@@ -1,0 +1,554 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1;
+    text-align: center;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center; 
+    padding: 10px;
+}
+.logo img{
+    width: 150px;          
+    height: auto;
+    margin-bottom: 0.7px;    
+}
+
+.logo h1{
+    font-size: 1.5rem;     
+    font-weight: bold;
+    color: #ffffff;         
+    font-family: Arial, sans-serif; 
+    text-align: center;
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    position: absolute; 
+    top: 10px; 
+    right: 20px; 
+    gap: 35px; 
+}
+
+.menu-buttons a {
+    text-decoration: none; 
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-buttons a:hover {
+    color: #de5593; 
+}
+
+.menu-buttons button {
+    background: #ffffff;
+    color: rgb(9, 5, 27);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu-buttons button:hover {
+    background: #de5593;
+    color: #ffffff;
+}
+
+.menu-buttons .search-button {
+    background: none; 
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.menu-buttons .icon {
+    width: 20px; 
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.menu-buttons .search-button:hover .icon {
+    transform: scale(1.1); 
+}
+
+
+.sub-nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: absolute; 
+    top: 150px; 
+    right: 50px; 
+    gap: 35px; 
+}
+
+.sub-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    margin: 0;
+    padding: 0;
+}
+
+.sub-nav li {
+    display: inline;
+}
+
+.sub-nav a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+.sub-nav a:hover {
+    color: #d42b7d; 
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    list-style-type: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+    margin: 10px 0;
+}
+
+.dropdown-menu li::before {
+    content: "→"; 
+    color: #d4007f;
+    font-size: 1.2rem;
+}
+
+
+.dropdown.active .dropdown-menu {
+    display: block; 
+}
+
+
+
+.banner {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px 20px;
+    background-color: #e5e5e5; 
+    border-top: 4px solid #8a0181; 
+    border-bottom: 4px solid #8a0181; 
+    gap: 20px; 
+}
+
+.banner p {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #040190; 
+    margin: 0;
+}
+
+.btn-help {
+    background-color: #fff; 
+    color: #0701c0; 
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 30px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-help:hover {
+    background-color: #d4007f; 
+    color: #fff; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    line-height: 1.5;
+}
+
+
+#about {
+    background-color: #66d4cc; 
+    background-image: url("C:\Users\fatim\Downloads\ab.jpg"); 
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    padding: 20px;
+    color: #000;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.btn-learn {
+    background-color: #005eb8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-learn:hover {
+    background-color: #004a94;
+}
+.hidden {
+    display: none;
+}
+
+
+.visible {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+.btn-learn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-learn:hover {
+    background-color: #c70580;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    line-height: 1.5;
+}
+
+
+#join {
+    background-color: #d1d1d1; 
+    background-image: url("C:\Users\fatim\Downloads\ab.jpg"); 
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    padding: 20px;
+    color: #000;
+}
+
+.join-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-content h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000; 
+}
+
+.join-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.btn-join {
+    background-color: #005eb8; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-join:hover {
+    background-color: #a91966; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+
+#contact {
+    background-color: #fdd6f8; 
+    background-image: url("C:\Users\fatim\Desktop\gp.png"); 
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    padding: 20px;
+    color: #000;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+
+.btn-submit {
+    background-color: #005eb8; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #004a94; 
+}
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    border-radius: 5px;
+}
+
+.news-container, .events-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.event, .news-item {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+
+footer {
+    background-color: #4d003f; 
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem; 
+}
+
+.footer-container h1,
+.footer-container h2,
+.footer-container p {
+    margin: 10px 0; 
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; 
+    display: inline-block; 
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
+
+body, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.donation-interface {
+    background-color: #fcaacb; 
+    padding: 40px 20px;
+    text-align: center;
+    display:block; 
+    background-color: #9e9e9e;
+}
+
+.donation-interface .container {
+    max-width: 800px;
+    margin: auto; 
+    padding: 20px;
+    border: 1px solid #f8aac3;
+    border-radius: 10px;
+    background-color: #fdc0cc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.donation-interface h2 {
+    color: #4c0050;
+    margin-bottom: 15px;
+    font-size: 2rem; 
+}
+
+.donation-interface p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.donation-interface ul {
+    list-style-type: disc;
+    text-align: left;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.donation-interface ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+.donation-interface .donate-button {
+    background-color: #008cba; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.donation-interface .donate-button:hover {
+    background-color: #c40477; 
+}
+
+
+.donation-interface .regulator-logo img {
+    margin-top: 20px;
+    width: 150px;
+}
+
+
+header, footer, .sub-nav, .banner, .join-content, .contact-content {
+    z-index: 1; 
+}
+
+
