@@ -1,0 +1,37 @@
+﻿
+    <div class="container">
+        <h1>Join Homeless Hope</h1>
+        <p>Become a member and help us end homelessness. Together, we can make a difference.</p>
+        <form onsubmit="handleJoin(event)">
+            <input id="name" type="text" placeholder="Your Full Name" required>
+            <input id="email" type="email" placeholder="Your Email Address" required>
+            <button type="submit">Join Now</button>
+        </form>
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+
+            <h2>Member Survey 2022</h2>
+            <p>&copy; 2024 Homeless Hope. All rights reserved.</p>
+
+            <p>Company number: 04313826 | Charity number: 1089173</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function handleJoin(event) {
+            event.preventDefault(); // Prevents the form from actually submitting
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name && email) {
+                alert(`Thank you, ${name}! Your membership request has been received.`);
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+
