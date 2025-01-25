@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Homeless Hope</title>
+    <link rel="stylesheet" href="homeless4.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #005cac;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #a0a0a0;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #1972c0;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #d80777;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="C:\Users\fatim\Desktop\hb.jpeg" alt="Logo">
+                <h1>Homeless Hope</h1>
+            </div>
+            <div class="menu-buttons">
+                <a href="#about" id="nav-about" class="menu-link"><strong>About Us</strong></a>
+                <a href="#footer" id="nav-contact" class="menu-link"><strong>Contact</strong></a>
+                <a href="find.html" target="_blank">
+                <button class="search-button">
+                    <img src="C:\Users\fatim\Downloads\wwwsearch.png" alt="Search" class="icon">
+                </button> </a>
+                <a href="find.html" target="_blank">
+                    <button id="findbtn"><strong>Find a Service</strong></button></a>
+                    <a href="donate.html" target="_blank">
+                    <button id="donateBtn"><strong>Donate</strong></button></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="sub-nav">
+                <li><a href="accomodation1.html" id="nav-accommodation" target="_blank">Accommodation</a></li>
+                <li><a href="uhm.html" id="nav-accommodation" target="_blank">Understanding Homelessness</a></li>
+                <li><a href="workforce.html" id="nav-accommodation" target="_blank">workforce</a></li>
+                <li><a href="membership.html" id="nav-accommodation" target="_blank">Membership</a></li>
+                <li><a href="slp.html" id="nav-accommodation" target="_blank">Supporting local partnerships</a></li>
+            </ul>
+        </nav>
+        
+        
+        <div class="banner">
+            <p>Are you homeless or at risk of becoming homeless?</p>
+            <a href="find.html" target="_blank">
+            <button class="btn-help">Get Help Now</button>
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join Homeless Hope</h1>
+        <p>Become a member and help us end homelessness. Together, we can make a difference.</p>
+        <form onsubmit="handleJoin(event)">
+            <input id="name" type="text" placeholder="Your Full Name" required>
+            <input id="email" type="email" placeholder="Your Email Address" required>
+            <button type="submit">Join Now</button>
+        </form>
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+            
+            <h2>Member Survey 2022</h2>
+            <p>&copy; 2024 Homeless Hope. All rights reserved.</p>
+            
+            <p>Company number: 04313826 | Charity number: 1089173</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function handleJoin(event) {
+            event.preventDefault(); // Prevents the form from actually submitting
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name && email) {
+                alert(`Thank you, ${name}! Your membership request has been received.`);
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+</body>
+</html>

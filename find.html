@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a service |Homeless Hope</title>
+    <link rel="stylesheet" href="homeless4.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="C:\Users\fatim\Desktop\hb.jpeg" alt="Logo">
+                <h1>Homeless Hope</h1>
+            </div>
+            <div class="menu-buttons">
+                <a href="#about" id="nav-about" class="menu-link"><strong>About Us</strong></a>
+                <a href="#footer" id="nav-contact" class="menu-link"><strong>Contact</strong></a>
+                <a href="find.html" target="_blank">
+                <button class="search-button">
+                    <img src="C:\Users\fatim\Downloads\wwwsearch.png" alt="Search" class="icon">
+                </button> </a>
+                <a href="find.html" target="_blank">
+                    <button id="findbtn"><strong>Find a Service</strong></button></a>
+                    <a href="donate.html" target="_blank">
+                    <button id="donateBtn"><strong>Donate</strong></button></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="sub-nav">
+                <li><a href="accomodation1.html" id="nav-accommodation" target="_blank">Accommodation</a></li>
+                <li><a href="uhm.html" id="nav-accommodation" target="_blank">Understanding Homelessness</a></li>
+                <li><a href="workforce.html" id="nav-accommodation" target="_blank">workforce</a></li>
+                <li><a href="membership.html" id="nav-accommodation" target="_blank">Membership</a></li>
+                <li><a href="slp.html" id="nav-accommodation" target="_blank">Supporting local partnerships</a></li>
+            </ul>
+        </nav>
+        
+        
+        <div class="banner">
+            <p>Are you homeless or at risk of becoming homeless?</p>
+            <a href="find.html" target="_blank">
+            <button class="btn-help">Get Help Now</button>
+            </a>
+        </div>
+    </header>
+    <a href="#search"></a>
+<section id="search">
+    <div class="search-content">
+        <h3>SEARCH HOMELESSNESS SERVICES IN ENGLAND.</h3>
+        <h1>Homeless Pakistan</h1>
+        <p>
+            Homeless Pakistan is the most comprehensive database of Homelessness services. It is constantly updated and lists 1500 projects up and down the country with contact details and service descriptions. It is provided by Homeless Link to promote joint working across the sector and to help individuals find local services.
+        </p>
+        <div class="search-box">
+            <form action="" method="get">
+                <label for="search-input">
+                    <h2><strong>Search:</strong></h2>
+                </label>
+                <select id="search-input" name="search" aria-label="Search for homelessness services">
+                    <option value="">I'm looking for homeless services</option>
+                    <option value="accomodation1.html">Accommodation</option>
+                    <option value="uhm.html">Understanding Homelessness</option>
+                    <option value="workforce.html">Workforce</option>
+                    <option value="membership.html">Membership</option>
+                    <option value="slp.html">Supporting Local Partnerships</option>
+                </select>
+                <button class="btn-learn"
+                    type="submit" 
+                    onclick="this.form.action=document.getElementById('search-input').value">
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <h1>
+                I believe this membership allows a voice to be heard that best represents the sector, its very best practice and the most informed vision for the future.
+            </h1>
+            <h2>Member Survey 2022</h2>
+            <p>&copy; 2024 Homeless Hope. All rights reserved.</p>
+            <h1>Contact</h1>
+            <p>Company number: 04313826 | Charity number: 1089173</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+    <script src="homeless4.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now | Homeless Hope</title>
+    <link rel="stylesheet" href="homeless4.css">
+</head>
+<body>
+
+<header class="donation-header">
+    <h1>Support Our Cause</h1>
+    <p>Your generosity helps us continue our mission to make a difference.</p>
+</header>
+
+<!-- Donation form container -->
+<div class="donation-container">
+    <main class="donation-main">
+        <div class="donation-form">
+            <h2>Donate Now</h2>
+            <form id="donation-form">
+                <label for="donor-name">Name:</label>
+                <input type="text" id="donor-name" name="donor-name" required>
+
+                <label for="donor-email">Email:</label>
+                <input type="email" id="donor-email" name="donor-email" required>
+
+                <label for="donation-amount">Donation Amount:</label>
+                <input type="number" id="donation-amount" name="donation-amount" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Optional message"></textarea>
+
+                <button id="donate-btn" type="submit">Donate Now</button>
+            </form>
+        </div>
+    </main>
+</div>
+
+<footer id="footer">
+    <div class="footer-container">
+        <p>Thank you for your generosity!</p>
+        <p>&copy; 2025 Homeless Hope. All rights reserved.</p>
+        <h1>Contact</h1>
+        <p>Company number: 04313826 | Charity number: 1089173</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const donationForm = document.getElementById("donation-form");
+
+        // Ensure the form is valid and prevent default form submission
+        donationForm.addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent form from submitting traditionally
+
+            // Get form values
+            const amount = document.getElementById("donation-amount").value;
+            const name = document.getElementById("donor-name").value;
+            const email = document.getElementById("donor-email").value;
+            const message = document.getElementById("message").value;
+
+            // Validate input fields
+            if (!amount || amount <= 0) {
+                alert("Please enter a valid donation amount.");
+                return;
+            }
+            if (!name.trim()) {
+                alert("Please enter your name.");
+                return;
+            }
+            if (!email.trim() || !validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Simulate a successful donation process
+            alert(`Thank you, ${name}!
+Your donation of £${amount} has been received.
+A confirmation email has been sent to ${email}.`);
+
+            // Optionally, clear form fields after submission
+            donationForm.reset();
+        });
+
+        // Function to validate email format
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    });
+</script>
+
+</body>
+</html>
